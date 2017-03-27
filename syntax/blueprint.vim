@@ -16,9 +16,13 @@ syn match dateTime '\d\{4\}-\d\{2\}-\d\{2\}T\d\{2\}:\d\{2\}:\d\{2\}'
 syn match dateTime '\d\{4\}-\d\{2\}-\d\{2\}T\d\{2\}:\d\{2\}:\d\{2\}Z'
 syn match dateTime '\d\{4\}-\d\{2\}-\d\{2\}T\d\{2\}:\d\{2\}:\d\{2\}[-+]\d\{4\}'
 
+" Guid beb9958b-0572-4dcc-a727-5b8f8bfb5cd4
+syn match guid '[0-9a-f]\{8\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{12\}'
+
 let b:current_syntax = "blueprint"
 
-hi def link transactionControl Comment
-hi def link entryName Statement
+hi def link transactionControl Statement
+hi def link entryName Type
+hi def link guid Comment
 hi def link ones Keyword
 hi def link dateTime Number
